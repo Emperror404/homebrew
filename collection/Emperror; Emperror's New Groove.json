@@ -264,7 +264,7 @@
 				]
 			},
 			"entries": [
-				"The cloth of a scarf or similarly sized article of clothing you are holding is transmuted to be as hard and sharp as steel. For the duration, you can make a melee weapon attack with the scarf, which deals {@damage 1d6} slashing damage and has the finesse and light properties.  You may add your spellcasting ability modifier to attack and damage rolls made with this weapon, and you are proficient with attacks made with this weapon.  The weapon is treated as magical. The spell ends if you cast it again or if you let go of the scarf. When the spell ends the scarf resumes its normal form."
+				"The cloth of a scarf or similarly sized article of clothing you are holding is transmuted to be as hard and sharp as steel. For the duration, you can make a melee weapon attack with the scarf, which deals {@damage 1d6} slashing damage and has the finesse and light properties. You may add your spellcasting ability modifier to attack and damage rolls made with this weapon, and you are proficient with attacks made with this weapon. The weapon is treated as magical. The spell ends if you cast it again or if you let go of the scarf. When the spell ends the scarf resumes its normal form."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -325,7 +325,7 @@
 			},
 			"entries": [
 				"With this spell you can touch a book or scroll and absorb the knowledge contained within as if you had just read it. A single casting of this spell can parse roughly 100 pages of text.",
-				"This is equivalent to a solid reading but not deep study— you do not gain perfect recall of the information, just whatever you would have gotten from reading it completely once. If you can't read the language of the source, the spell has no effect.",
+				"This is equivalent to a solid reading but not deep study\u2014 you do not gain perfect recall of the information, just whatever you would have gotten from reading it completely once. If you can't read the language of the source, the spell has no effect.",
 				"This spell cannot be used to prepare spells or to cast magical scrolls, nor does it have any effect when reading a magical book (such as a tome of understanding). However, you do not have to be able to see to cast this spell, making it useful for mages suffering from prolonged visual impairment or with failing eyesight from advanced age."
 			],
 			"source": "EmperrorsNewGroove",
@@ -2007,7 +2007,14 @@
 			},
 			"entries": [
 				"By means of a divine chant, the caster brings special favor upon themselves and their allies, and causes harm to their enemies. When this spell is cast, the caster begins chanting. The following effects take place while the chant is ongoing:",
-				"<ul><li> You and creatures of your choice within the spell's area gain a +1 bonus on saving throws, skill checks, and attack and damage rolls.</li><li>Creatures of your choice within the spell's area suffer a -1 penalty on saving throws, skill checks, and attack and damage rolls.</li><li>While you are chanting you cannot speak normally or cast spells with verbal components.  Additionally, your speed is halved while chanting.</li></ul>",
+				{
+					"type": "list",
+					"items": [
+						"You and creatures of your choice within the spell's area gain a +1 bonus on saving throws, skill checks, and attack and damage rolls.",
+						"Creatures of your choice within the spell's area suffer a \u22121 penalty on saving throws, skill checks, and attack and damage rolls.",
+						"While you are chanting you cannot speak normally or cast spells with verbal components. Additionally, your speed is halved while chanting."
+					]
+				},
 				"The caster can chant for the duration of the spell. Should their chant be interrupted (such as by magical {@spell silence}), the spell ends regardless of your {@status concentration}."
 			],
 			"source": "EmperrorsNewGroove",
@@ -3194,7 +3201,16 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"For each level above 2nd that you cast this spell, the myconid spirit gains the following benefits:<ul><li>+10 hp</li><li>+1 AC</li><li>+1 to attack and damage rolls</li><li>Other benefits as described in the stat block</li></ul>"
+						"For each level above 2nd that you cast this spell, the myconid spirit gains the following benefits:",
+						{
+							"type": "list",
+							"items": [
+								"+10 hp",
+								"+1 AC",
+								"+1 to attack and damage rolls",
+								"Other benefits as described in the stat block"
+							]
+						}
 					]
 				}
 			]
@@ -3251,8 +3267,26 @@
 			},
 			"entries": [
 				"You alter the way your body receives sensory input such that you can either feel light or feel sound. Choose which version of the spell you are using when you cast it:",
-				"<b>Feel Light.</b> You are immune to the Blinded condition. You can feel light with your normal visual acuity, including Darkvision if you possess it.",
-				"<b>Feel Sound.</b> You are immune to the Deafened condition. You gain Blindsense out to a radius of 10 ft. feet.",
+				{
+					"type": "list",
+					"style": "list-no-bullets",
+					"items": [
+						{
+							"type": "item",
+							"name": "Feel Light",
+							"entries": [
+								"You are immune to the {@condition Blinded} condition. You can feel light with your normal visual acuity, including Darkvision if you possess it."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Feel Sound",
+							"entries": [
+								"You are immune to the {@condition Deafened} condition. You gain Blindsense out to a radius of 10 ft. feet."
+							]
+						}
+					]
+				},
 				"These new senses require at least a hand-sized portion of your skin to be uncovered (typically your hands or face). These senses have no special ability to defeat illusions and similar effects. Gaze attacks that require you to see the creature, such as a {@creature medusa} or {@creature basilisk}'s abilities, do not affect you if you are perceiving them solely through the Feel Light version of this spell."
 			],
 			"source": "EmperrorsNewGroove",
@@ -3700,9 +3734,9 @@
 				"You create a magical hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.",
 				"The hand is a Tiny object that has AC equal to your spell save DC. If it is damaged, you must make a Constitution saving throw to maintain {@status concentration} on the spell as though you had taken the damage, though you remain unharmed. It has a Strength and Dexterity score equal to your spellcasting ability. The hand doesn't fill its space.",
 				"When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 30 feet and then cause one of the following effects with it.",
-				"<b>Clenched Fist.</b> The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes {@damage 2d8} force damage.",
-				"<b>Deft Hand.</b> The hand can manipulate an object, activate a magic item, or make an attack with a weapon it is wielding. If a magic item requires attunement to activate, and you are attuned to it, the hand can activate it.",
-				"<b>Forceful Hand.</b> The hand attempts to shove a creature within 5 feet of it in a direction you choose. Make a check with your spellcasting attribute contested by the Strength (Athletics) check of the target, as per the Shove action. If the target is Large or larger, you have disadvantage on the check."
+				"{@b Clenched Fist.} The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes {@damage 2d8} force damage.",
+				"{@b Deft Hand.} The hand can manipulate an object, activate a magic item, or make an attack with a weapon it is wielding. If a magic item requires attunement to activate, and you are attuned to it, the hand can activate it.",
+				"{@b Forceful Hand.} The hand attempts to shove a creature within 5 feet of it in a direction you choose. Make a check with your spellcasting attribute contested by the Strength (Athletics) check of the target, as per the Shove action. If the target is Large or larger, you have disadvantage on the check."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -3953,8 +3987,8 @@
 			},
 			"entries": [
 				"You sheathe the target in a variably polarized magnetic field. Make a melee spell attack against a creature within your reach (a creature can choose to let you hit it). On a hit, choose one of the following options to take effect until the spell ends:",
-				"<b>Attraction.</b> Metallic and electrically charged objects are attracted to the target. Attacks with metallic weapons or projectiles have advantage, as do attacks that deal lightning damage. The target has disadvantage on saving throws against effects that deal lightning damage. Metallic objects cling to the target and require a Strength saving throw to pull away.",
-				"<b>Repulsion.</b> Metallic and electrically charged objects are repelled from the target. Attacks with metallic weapons or projectiles have disadvantage, as do attacks that deal lightning damage. The target has advantage on saving throws against effects that deal lightning damage. Metallic objects on the target's person are violently repelled unless affixed via secure means. Normally worn armor is unaffected by this, but a metallic melee weapon the target is wielding requires a successful Strength saving throw at the start of each turn to be retained."
+				"{@b Attraction.} Metallic and electrically charged objects are attracted to the target. Attacks with metallic weapons or projectiles have advantage, as do attacks that deal lightning damage. The target has disadvantage on saving throws against effects that deal lightning damage. Metallic objects cling to the target and require a Strength saving throw to pull away.",
+				"{@b Repulsion.} Metallic and electrically charged objects are repelled from the target. Attacks with metallic weapons or projectiles have disadvantage, as do attacks that deal lightning damage. The target has advantage on saving throws against effects that deal lightning damage. Metallic objects on the target's person are violently repelled unless affixed via secure means. Normally worn armor is unaffected by this, but a metallic melee weapon the target is wielding requires a successful Strength saving throw at the start of each turn to be retained."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -4569,8 +4603,8 @@
 			},
 			"entries": [
 				"With this spell, you weave an arcane trap inside your mind for any invaders. This spell has two versions; you either cast it while you are awake, or right before you go to sleep:",
-				"<b>Awake.</b> You ward your mind against mental intrusions. Any creature that attempts to sense your emotions or read your thoughts, or one that would bestow the {@condition charmed} condition upon you, takes {@damage 5d6} psychic damage and is {@condition stunned} for 1 minute. On a successful Wisdom saving throw, the creature takes half damage and is not {@condition stunned}.  A creature which fails its saving throw may attempt again at the end of it's turn.",
-				"<b>Asleep.</b> This spell lurks in your dreams, staying on the edges of your perception as a comforting creature or object. If your dreams are invaded or tampered with while you sleep, such as by the {@spell dream} spell or a {@creature night hag}'s nightmare haunting, the solipsistic interloper springs the trap. They take {@damage 5d6} psychic damage or half as much on a successful Wisdom saving throw. If they psychically invaded your dreams, then they are trapped there. You immediately become aware that you are dreaming, and can choose to wake up or hold the invader in place, preventing them from waking up while you are asleep.",
+				"{@b Awake.} You ward your mind against mental intrusions. Any creature that attempts to sense your emotions or read your thoughts, or one that would bestow the {@condition charmed} condition upon you, takes {@damage 5d6} psychic damage and is {@condition stunned} for 1 minute. On a successful Wisdom saving throw, the creature takes half damage and is not {@condition stunned}. A creature which fails its saving throw may attempt again at the end of it's turn.",
+				"{@b Asleep.} This spell lurks in your dreams, staying on the edges of your perception as a comforting creature or object. If your dreams are invaded or tampered with while you sleep, such as by the {@spell dream} spell or a {@creature night hag}'s nightmare haunting, the solipsistic interloper springs the trap. They take {@damage 5d6} psychic damage or half as much on a successful Wisdom saving throw. If they psychically invaded your dreams, then they are trapped there. You immediately become aware that you are dreaming, and can choose to wake up or hold the invader in place, preventing them from waking up while you are asleep.",
 				"A {@creature night hag} that triggers a this spell using their nightmare haunting ability is forced to the Material Plane and {@condition paralyzed} for 1 minute if they failed their saving throw. They can attempt their saving throw again at the end of each turn.",
 				"At the DM's discretion, other creatures might also be specially affected by this spell.",
 				"After the spell has warded against one such mental intrusion, the spell ends."
@@ -4705,7 +4739,43 @@
 				"This spell transfers all magical properties from one item to another, destroying the first item while making the second item magical. The two items must be similar in function; such as a longsword's enchantments being transferred to a shortsword.",
 				"The item to receive the enchantment must be nonmagical, but capable of holding the enchantment to be transferred.",
 				"The spellcaster must make a successful Intelligence (Arcana) check to transfer the magical properties, as shown below. If the check fails, then the caster may try again after they have taken a long rest.",
-				"<table><tr><th>Item Rarity</th><th>DC</th></tr><tr><tr><td>Common</td><td>10</td></tr><tr><td>Uncommon</td><td>13</td></tr><tr><td>Rare</td><td>17</td></td><tr><td>Very Rare</td><td>20</td></tr><tr><td>Legendary</td><td>25</td></tr><tr><td>Artifacts</td><td>N/A</td></tr></table>",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-9",
+						"col-3 text-right"
+					],
+					"colLabels": [
+						"Item Rarity",
+						"DC"
+					],
+					"rows": [
+						[
+							"Common",
+							"10"
+						],
+						[
+							"Uncommon",
+							"13"
+						],
+						[
+							"Rare",
+							"17"
+						],
+						[
+							"Very Rare",
+							"20"
+						],
+						[
+							"Legendary",
+							"25"
+						],
+						[
+							"Artifacts",
+							"N/A"
+						]
+					]
+				},
 				"A sentient magic item can make a Charisma saving throw to resist the effect."
 			],
 			"source": "EmperrorsNewGroove",
@@ -5614,8 +5684,8 @@
 			},
 			"entries": [
 				"When you cast this spell, choose one of two effects:",
-				"<b>Prepare.</b> You regain up to three levels of spell slots you have already cast (such as three 1st-level spells, a 2nd- and a 1st-level spell, or a 3rd-level spell).",
-				"<b>Correct.</b> You can change a number of spells you have prepared up to your spellcasting ability modifier with other spells you have in your spell book."
+				"{@b Prepare.} You regain up to three levels of spell slots you have already cast (such as three 1st-level spells, a 2nd- and a 1st-level spell, or a 3rd-level spell).",
+				"{@b Correct.} You can change a number of spells you have prepared up to your spellcasting ability modifier with other spells you have in your spell book."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -5761,7 +5831,7 @@
 				]
 			},
 			"entries": [
-				"This spell holds the magical energy of other spells until needed by the caster. As part of the casting for this spell, choose spells whose slot levels total to 3 or less, and with casting times of 1 action or less. You cast those spells as part of casting sequencer — expending spell slots for all of them— but those spells don't come into effect. Instead, they remains stored until you release them.",
+				"This spell holds the magical energy of other spells until needed by the caster. As part of the casting for this spell, choose spells whose slot levels total to 3 or less, and with casting times of 1 action or less. You cast those spells as part of casting sequencer \u2014 expending spell slots for all of them\u2014 but those spells don't come into effect. Instead, they remains stored until you release them.",
 				"Releasing the spells stored with sequencer is a reaction. When you take this reaction, all of the stored spells are cast at once and take effect in the order you choose. If {@spell sequencer} ends and you have not cast the spells you are holding, then those spells are lost. If a stored spell requires {@status concentration}, then you must still concentrate on it.",
 				"You can only have one {@spell sequencer} spell in effect at a time."
 			],
@@ -6538,7 +6608,7 @@
 			},
 			"entries": [
 				"An {@condition invisible} ray projects from your fingertip. Make a ranged spell attack against your target. If struck, the target is treated as though they were inside an {@spell antimagic field}.",
-				"If this spell is used against an object, that object's magical powers are suppressed—including any spells previously cast and currently in effect on the item, as well as any spells or magical effects targeted on the object during the antimagic ray's duration.",
+				"If this spell is used against an object, that object's magical powers are suppressed\u2014including any spells previously cast and currently in effect on the item, as well as any spells or magical effects targeted on the object during the antimagic ray's duration.",
 				"The spell doesn't affect any objects other than the target itself, even if those objects are worn, carried by, or in contact with the target. They are still capable of casting spells from scrolls, wands, and staves, however they are not able to receive the benefits (or deleterious effects) of any spells or magic items themselves, including potions.",
 				"For instance, if a creature is the target, its equipment remains unaffected.",
 				"A creature struck by this spell may attempt a Wisdom saving throw at the end of each of its turns to shake off the effect."
@@ -6705,15 +6775,15 @@
 				"You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or stepping on the glyph, removing another object covering it, approaching within a certain distance of it, or manipulating the object that holds it. For glyphs inscribed within an object, the most common triggers are opening the object, approaching within a certain distance of it, or seeing or reading the glyph.",
 				"You can further refine the trigger so the spell is activated only under certain circumstances or according to a creature's physical characteristics (such as height or weight), or physical kind (for example, the ward could be set to affect hags or shapechangers). You can also specify creatures that don't trigger the glyph, such as those who say a certain password.",
 				"When you inscribe the glyph, choose one of the options below for its effect. Once triggered, the glyph glows, filling a 60-foot-radius sphere with dim light for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.",
-				"<b>Death.</b> Each target must make a Constitution saving throw, taking {@damage 10d10} necrotic damage on a failed save, or half as much damage on a successful save.",
-				"<b>Discord.</b>Each target must make a Constitution saving throw. On a failed save, a target bickers and argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has disadvantage on attack rolls and ability checks.",
-				"<b>Fear.</b> Each target must make a Wisdom saving throw and becomes  {@condition frightened} for 1 minute on a failed save. While  {@condition frightened}, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able.",
-				"<b>Hopelessness.</b>Each target must make a Charisma saving throw. On a failed save, the target is overwhelmed with despair for 1 minute. During this time, it can't attack or target any creature with harmful abilities, spells, or other magical effects.",
-				"<b>Insanity.</b>Each target must make an Intelligence saving throw. On a failed save, the target is driven insane for 1 minute. An insane creature can't take actions, can't understand what other creatures say, can't read, and speaks only in gibberish. The DM controls its movement, which is erratic.",
-				"<b>Pain.</b>Each target must make a Constitution saving throw and becomes  {@condition incapacitated} with excruciating pain for 1 minute on a failed save.",
-				"<b>Sleep.</b>Each target must make a Wisdom saving throw and falls  {@condition unconscious} for 10 minutes on a failed save. A creature awakens if it takes damage or if someone uses an action to shake or slap it awake.",
-				"<b>Stunning.</b>Each target must make a Wisdom saving throw and becomes  {@condition stunned} for 1 minute on a failed save.",
-				"<b>Spell Loss.</b>Each target must make a Wisdom saving throw or lose their highest level spell slot. All creatures with spell slots must continue making this save each turn until they have no more spell slots, or until the symbol has absorbed 50 levels of spells."
+				"{@b Death.} Each target must make a Constitution saving throw, taking {@damage 10d10} necrotic damage on a failed save, or half as much damage on a successful save.",
+				"{@b Discord.}Each target must make a Constitution saving throw. On a failed save, a target bickers and argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has disadvantage on attack rolls and ability checks.",
+				"{@b Fear.} Each target must make a Wisdom saving throw and becomes {@condition frightened} for 1 minute on a failed save. While {@condition frightened}, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able.",
+				"{@b Hopelessness.}Each target must make a Charisma saving throw. On a failed save, the target is overwhelmed with despair for 1 minute. During this time, it can't attack or target any creature with harmful abilities, spells, or other magical effects.",
+				"{@b Insanity.}Each target must make an Intelligence saving throw. On a failed save, the target is driven insane for 1 minute. An insane creature can't take actions, can't understand what other creatures say, can't read, and speaks only in gibberish. The DM controls its movement, which is erratic.",
+				"{@b Pain.}Each target must make a Constitution saving throw and becomes {@condition incapacitated} with excruciating pain for 1 minute on a failed save.",
+				"{@b Sleep.}Each target must make a Wisdom saving throw and falls {@condition unconscious} for 10 minutes on a failed save. A creature awakens if it takes damage or if someone uses an action to shake or slap it awake.",
+				"{@b Stunning.}Each target must make a Wisdom saving throw and becomes {@condition stunned} for 1 minute on a failed save.",
+				"{@b Spell Loss.}Each target must make a Wisdom saving throw or lose their highest level spell slot. All creatures with spell slots must continue making this save each turn until they have no more spell slots, or until the symbol has absorbed 50 levels of spells."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -6955,7 +7025,7 @@
 			},
 			"entries": [
 				"At the conclusion of an 8 hour ritual, you lay your hands upon a volume of base metal, and transmute it into a precious metal. You must concentrate during the entire casting of this spell. If you {@status concentration} is broken, then the volume of metal rusts away and you must make a Constitution saving throw against your own spell save DC or become Petrified.",
-				"This spell transmutes iron into an equal volume of silver, or lead into an equal volume of gold. This spell will not transmute alloys of any sort; the metal to be transmuted must be pure. At the DM’s discretion, the spell might transmute other types of metals as well.",
+				"This spell transmutes iron into an equal volume of silver, or lead into an equal volume of gold. This spell will not transmute alloys of any sort; the metal to be transmuted must be pure. At the DM's discretion, the spell might transmute other types of metals as well.",
 				"This spell can transmute up to 5 cubic feet of metal.",
 				"5 cubic feet of lead weighs approximately 3,500 pounds and costs 175 gp. Transmuting this into gold will increase the weight to approximately 6,000 pounds, with a value of approximately 300,000 gp.",
 				"5 cubic feet of iron weighs approximately 2,500 pounds and costs 250 gp. Transmuting this into silver will increase the weight to approximately 3,250 pounds, weight a value of approximately 30,000 gp."
@@ -7013,7 +7083,18 @@
 			},
 			"entries": [
 				"You endow yourself with endurance and martial prowess fueled by magic. Until the spell ends, you can't cast spells, and you gain the following benefits:",
-				"<ul><li>You gain 100 temporary hit points. If any of these remain when the spell ends, they are lost.</li><li>You have advantage on attack rolls that you make with simple and martial weapons.</li><li>When you hit a target with a weapon attack, that target takes an extra {@damage 4d12} force damage.</li><li>You have proficiency with all armor, shields, simple weapons, and martial weapons.</li><li>You have proficiency in Strength and Constitution saving throws.</li><li>You can attack twice, instead of once, when you take the  Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that gives you extra attacks.</li><li>You can magically equip any item to which you are attuned as part of casting this spell. Weapons and shields appear in hand, and armor teleports onto your person.</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"You gain 100 temporary hit points. If any of these remain when the spell ends, they are lost.",
+						"You have advantage on attack rolls that you make with simple and martial weapons.",
+						"When you hit a target with a weapon attack, that target takes an extra {@damage 4d12} force damage.",
+						"You have proficiency with all armor, shields, simple weapons, and martial weapons.",
+						"You have proficiency in Strength and Constitution saving throws.",
+						"You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that gives you extra attacks.",
+						"You can magically equip any item to which you are attuned as part of casting this spell. Weapons and shields appear in hand, and armor teleports onto your person."
+					]
+				}
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -7331,9 +7412,9 @@
 			"entries": [
 				"This spell must be cast at night. When you do so, the surrounding 100 miles are laid under your spell. The temperature in this region rapidly drops to arctic conditions, killing off vegetation and endangering unprotected creatures. For the next day, the sun fails to rise in this region, blocked out by a magical firmament. A bright aurora scintillates across the sky, providing Bright Light outside for the duration of the spell.",
 				"While this spell is active, you can use a bonus action on your turn to cause one of the following effects within an outdoors environment in the spell's area:",
-				"<b>Faerie Frost.</b> A 50 foot radius area within the spell is glazed with a sparkling, icy coating. Creatures in this area must make a Dexterity saving throw or also be coated. Until your next turn, any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being {@condition invisible}.",
-				"<b>Razor Sleet.</b> Gale force winds sweep through the area, assailing creatures with razor sharp ice and pushing them. A line of strong wind 60 feet long and 10 feet wide appears within the spells area. Creatures within the line of wind must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line, and take {@dice 4d10} slashing and {@damage 4d10} cold damage. A creature that makes their save is not moved, and takes half damage.",
-				"<b>Rimefire.</b> Sheets of energized light cascade from the auroras, sweeping across an area and destroying that which it touches. A wall of radiant energy 5 feet wide, 100 feet long, and 100 feet tall appears within the area of the spell. The wall blocks line of sight, but not movement. A creature that ends its turn in the wall's area takes {@damage 8d8} radiant damage, or half as much damage on a successful Constitution saving throw. A shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.",
+				"{@b Faerie Frost.} A 50 foot radius area within the spell is glazed with a sparkling, icy coating. Creatures in this area must make a Dexterity saving throw or also be coated. Until your next turn, any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being {@condition invisible}.",
+				"{@b Razor Sleet.} Gale force winds sweep through the area, assailing creatures with razor sharp ice and pushing them. A line of strong wind 60 feet long and 10 feet wide appears within the spells area. Creatures within the line of wind must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line, and take {@dice 4d10} slashing and {@damage 4d10} cold damage. A creature that makes their save is not moved, and takes half damage.",
+				"{@b Rimefire.} Sheets of energized light cascade from the auroras, sweeping across an area and destroying that which it touches. A wall of radiant energy 5 feet wide, 100 feet long, and 100 feet tall appears within the area of the spell. The wall blocks line of sight, but not movement. A creature that ends its turn in the wall's area takes {@damage 8d8} radiant damage, or half as much damage on a successful Constitution saving throw. A shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.",
 				"At the beginning of your next turn, the wall of radiant energy moves up to 500 feet in a direction of your choice. Anything it touches during this movement is affected as though it had ended its turn in the wall's area."
 			],
 			"source": "EmperrorsNewGroove",
@@ -7458,7 +7539,7 @@
 			},
 			"entries": [
 				"You cause a comet to fall from the sky and crash to the ground at a point you can see up to 1 mile away from you. You must be outdoors when you cast the spell, or nothing happens and the spell is wasted.",
-				"The comet creates a 50-foot-deep, 500-foot-radius crater on impact. Any creature in that radius must make a Dexterity saving throw, taking {@damage 50d10} force damage on a failed saving throw, or half as much damage on a successful one. All structures in the crater are destroyed, as are all nonmagical objects that aren't being worn or held.  This area becomes difficult terrain until repaired."
+				"The comet creates a 50-foot-deep, 500-foot-radius crater on impact. Any creature in that radius must make a Dexterity saving throw, taking {@damage 50d10} force damage on a failed saving throw, or half as much damage on a successful one. All structures in the crater are destroyed, as are all nonmagical objects that aren't being worn or held. This area becomes difficult terrain until repaired."
 			],
 			"source": "EmperrorsNewGroove",
 			"components": {
@@ -7819,7 +7900,7 @@
 			"source": "EmperrorsNewGroove",
 			"components": {
 				"m": {
-					"text": "A gold dragon's gizzard, 1 gallon of tarrasque blood, bile from a 12-headed hydra, a diamond worth at least 100,000 gp,  and the remains of a dead god; all are consumed by the spell",
+					"text": "A gold dragon's gizzard, 1 gallon of tarrasque blood, bile from a 12-headed hydra, a diamond worth at least 100,000 gp, and the remains of a dead god; all are consumed by the spell",
 					"consume": true
 				}
 			},
@@ -7917,8 +7998,8 @@
 			"entries": [
 				"You return to life several dead creatures, provided they have been dead no longer than 10 days and are within 1 mile of you. If the creature's soul is both willing and at liberty to rejoin the body, the creature returns to life with 1 hit point.",
 				"This spell also neutralizes any poisons and cures nonmagical diseases that affected the creature at the time it died. This spell doesn't, however, remove magical diseases, curses, or similar effects; if these aren't first removed prior to casting the spell, they take effect when the creature returns to life. The spell can't return an undead creature to life.",
-				"This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell fails to affect that creature.",
-				"Coming back from the dead is an ordeal. A target takes a −4 penalty to all attack rolls, saving throws, and ability checks. Every time a target finishes a long rest, the penalty is reduced by 1 until it disappears.",
+				"This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival\u2014its head, for instance\u2014the spell fails to affect that creature.",
+				"Coming back from the dead is an ordeal. A target takes a \u22124 penalty to all attack rolls, saving throws, and ability checks. Every time a target finishes a long rest, the penalty is reduced by 1 until it disappears.",
 				"This spell is taxing to cast, and you gain 2 levels of Exhaustion upon doing so.",
 				"Casting this spell greatly upsets those who guard the barriers between life and death, who call a Wild Hunt upon the caster. At some point within the next year, at the DM's discretion, a number of {@creature Avatars of Death} (see the stat block in the Deck of Many Things entry) or similar undead creatures equal to the number of creatures resurrected by this spell show up in force to seek the caster's death. If the caster is slain in this encounter, they can't be restored to life."
 			],
@@ -8538,7 +8619,7 @@
 			}
 		}
 	],
-	"item":[
+	"item": [
 		{
 			"name": "Amulet of Form Stability",
 			"source": "EmperrorsNewGroove",
@@ -8559,7 +8640,7 @@
 			"wondrous": true,
 			"entries": [
 				"This golden amulet is inscribed with the words: 'Sorcerous Sundries. Sellers to Heroes, Monarchs, Gods'. The words swim to become written in the native language of whoever reads them.",
-				"<b>Shopping Trip.</b> By focusing on this amulet as an action and saying the command word ('Cha-ching'), you are magically transported to the lounge of Sorcerous Sundries. Up to ten creatures, linked by their hands, can accompany you. Once you use this ability, you can't use it again until after 5 days has passed."
+				"{@b Shopping Trip.} By focusing on this amulet as an action and saying the command word ('Cha-ching'), you are magically transported to the lounge of Sorcerous Sundries. Up to ten creatures, linked by their hands, can accompany you. Once you use this ability, you can't use it again until after 5 days has passed."
 			],
 			"foundryImg": "icons/equipment/neck/amulet-round-engraved-spiral-gold.webp"
 		},
@@ -8587,7 +8668,43 @@
 				"You can use an action to pull a bone from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d6 and consulting the table. The creature vanishes at the next dawn or when it is reduced to 0 hit points.",
 				"The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.",
 				"Once three bones have been pulled from the bag, the bag can't be used again until the next dawn.",
-				"<table><tr><th>d6</th><th>Creature</th></tr><tr><td>1</td><td>d3 {@creature Skeleton}s</td></tr><tr><td>2</td><td>d3 {@creature Zombie}s</td></tr><tr><td>3</td><td>{@creature Ghoul}</td></tr><tr><td>4</td><td>{@creature Specter}</td></tr><tr><td>5</td><td>{@creature Ogre Zombie}</td></tr><tr><td>6</td><td>d3 {@creature Shadow}s</td></tr></table>"
+				{
+					"type": "table",
+					"colStyles": [
+						"col-1 text-center",
+						"col-11 text-center"
+					],
+					"colLabels": [
+						"d6",
+						"Creature"
+					],
+					"rows": [
+						[
+							"1",
+							"{@dice d3} {@creature Skeleton}s"
+						],
+						[
+							"2",
+							"{@dice d3} {@creature Zombie}s"
+						],
+						[
+							"3",
+							"{@creature Ghoul}"
+						],
+						[
+							"4",
+							"{@creature Specter}"
+						],
+						[
+							"5",
+							"{@creature Ogre Zombie}"
+						],
+						[
+							"6",
+							"{@dice d3} {@creature Shadow}s"
+						]
+					]
+				}
 			],
 			"foundryImg": "icons/containers/bags/coinpouch-leather-grey.webp"
 		},
@@ -8670,10 +8787,10 @@
 			"weight": 2,
 			"wondrous": true,
 			"entries": [
-				"This item might be made of silk or soft leather, but it’s always fairly wide and with a big buckle (usually brass or silver).",
+				"This item might be made of silk or soft leather, but it's always fairly wide and with a big buckle (usually brass or silver).",
 				"Hidden inside the belt are ten small pockets, each of which seems big enough to hold only a few coins. Each pocket actually functions as a small {@item bag of holding}. No object with any dimension exceeding 6 inches can be placed in a pocket. Anything placed inside a pocket is weightless. In addition, two secret pockets lie behind each visible one, for a total of thirty pockets in all. The hidden pockets can be accessed only through a command word. A {@spell true seeing} or {@spell legend lore} spell reveals the presence of the hidden pockets but not the command needed to open them (these pockets are not detected by an {@spell identify} spell). Even when a pocket is full, it never bulges, so a belt of hidden pouches stuffed with 150 pounds of items looks like an ordinary belt.",
 				"Accessing a regular pocket uses your object interaction on your turn, while accessing a hidden pocket is a bonus action.",
-				"Simply frisking the wearer won’t reveal any objects placed in the belt, and searching the visible pockets cannot reveal anything stored in the hidden pockets. It is possible to pickpocket something out of one of the ten visible pockets, but only someone wearing or holding the belt can access the hidden pockets, and then only with the correct command word."
+				"Simply frisking the wearer won't reveal any objects placed in the belt, and searching the visible pockets cannot reveal anything stored in the hidden pockets. It is possible to pickpocket something out of one of the ten visible pockets, but only someone wearing or holding the belt can access the hidden pockets, and then only with the correct command word."
 			],
 			"foundryImg": "icons/containers/bags/pouch-leather-simple-tan.webp"
 		},
@@ -8687,7 +8804,7 @@
 			"wondrous": true,
 			"entries": [
 				"Your Constitution score is 16 while you wear this belt. It has no effect on you if your Constitution is already 16 or higher without it.",
-				"<b>Savage Critical:</b> When you critically hit with a melee weapon attack, you can add an additional weapon damage dice when determining the extra damage for a critical hit with a melee attack"
+				"{@b Savage Critical:} When you critically hit with a melee weapon attack, you can add an additional weapon damage dice when determining the extra damage for a critical hit with a melee attack"
 			],
 			"foundryImg": "icons/equipment/waist/belt-buckle-gem-red.webp"
 		},
@@ -8702,7 +8819,7 @@
 			"entries": [
 				"Your Strength score is 22 while you wear this belt. It has no effect on you if your Strength is already 22 or higher without it.",
 				"Additionally, your unarmed strikes inflict 1d6 bludgeoning damage while wearing this belt.",
-				"<b>Big, Stupid Fingers.</b> You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell. Your Dexterity score is 6 while you are attuned this belt. It has no effect on you if your Dexterity is already 6 or lower without it."
+				"{@b Big, Stupid Fingers.} You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell. Your Dexterity score is 6 while you are attuned this belt. It has no effect on you if your Dexterity is already 6 or lower without it."
 			],
 			"foundryImg": "icons/equipment/waist/belt-ring-steel.webp"
 		},
@@ -8726,7 +8843,7 @@
 			"wondrous": true,
 			"entries": [
 				"While wearing this amulet, you are hidden from divination magic. When you are targeted by such magic or perceived through magical scrying sensors, the caster of that spell takes {@dice 10d6} psychic damage, or half that on a successful DC 18 Wisdom saving throw."
-			]			
+			]
 		},
 		{
 			"name": "Blindfold of Darkness",
@@ -8764,7 +8881,7 @@
 			"wondrous": true,
 			"entries": [
 				"While attuned to these boots, your speed is doubled, you gain a +2 bonus to AC, you have advantage on Dexterity saving throws, and you gain an additional action on each of your turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.",
-				"<b>Cursed.</b>These boots are cursed, and you cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell. While attuned, you are restless and cannot slow down. You cannot take a short or long rest while attuned to these boots."
+				"{@b Cursed.}These boots are cursed, and you cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell. While attuned, you are restless and cannot slow down. You cannot take a short or long rest while attuned to these boots."
 			]
 		},
 		{
@@ -8777,7 +8894,7 @@
 			"recharge": "restLong",
 			"charges": 1,
 			"entries": [
-				"While wearing these boots, you ignore the effects of difficult terrain and have advantage to resist effects that would move you against your will. Additionally, you can cast {@spell stoneskin} using these boots as an action. Once you do so, you can’t do so again until you complete a long rest."
+				"While wearing these boots, you ignore the effects of difficult terrain and have advantage to resist effects that would move you against your will. Additionally, you can cast {@spell stoneskin} using these boots as an action. Once you do so, you can't do so again until you complete a long rest."
 			],
 			"foundryImg": "icons/equipment/feet/boots-plate-steel-white.webp"
 		},
@@ -8818,7 +8935,7 @@
 				"These cursed bracers were designed to humanely hinder or prevent criminal acts while worn, such as for persons released on bail or who are on parole.",
 				"While attuned to this item, you cannot cast spells with somatic components, and you have disadvantage on all attack rolls.",
 				"A creature who is {@condition incapacitated} automatically attunes to this item if they wear them for at least 1 minute (if they are already attuned to their maximum number of items, a randomly chosen item has its attunement removed).",
-				"<b>Cursed.</b> You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell"
+				"{@b Cursed.} You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell"
 			],
 			"foundryImg": "icons/equipment/wrist/bracer-studded-copper.webp"
 		},
@@ -8833,7 +8950,7 @@
 			"recharge": "restShort",
 			"entries": [
 				"Your Strength score is 16 while you wear these gauntlets. They have no effect on you if your Strength is already 16 or higher without them.",
-				"<b>Brute Strength:</b> When you hit with a melee weapon attack, you can add an additional die of damage. Once you use this ability, you can't use it again until you complete a short rest."
+				"{@b Brute Strength:} When you hit with a melee weapon attack, you can add an additional die of damage. Once you use this ability, you can't use it again until you complete a short rest."
 			],
 			"foundryImg": "icons/equipment/wrist/bracer-banded-leather.webp"
 		},
@@ -8870,9 +8987,9 @@
 			"weight": 3,
 			"wondrous": true,
 			"entries": [
-				"<i>The monk themselves in their seeking is the koan. Realization of this is the insight; the response to the koan. Subject and object – this is two hands clapping. When the monk realizes that the koan is not merely an object of consciousness but is also theirself as the activity of seeking an answer to the koan, then subject and object are no longer separate and distinct... This is one hand clapping.</i>",
+				"{@i The monk themselves in their seeking is the koan. Realization of this is the insight; the response to the koan. Subject and object \u2013 this is two hands clapping. When the monk realizes that the koan is not merely an object of consciousness but is also theirself as the activity of seeking an answer to the koan, then subject and object are no longer separate and distinct... This is one hand clapping.}",
 				"This scroll is part of a larger meditation on the discovery and realization of the virtuous self. If you spend 48 hours over a period of 6 days or fewer studying the scroll's contents and contemplating its maxims, you gain 1 Ki point. If you do not have abilities that use Ki points, you may spend 1 Ki point as a bonus action to take the Dodge, Disengage, or Dash action. You restore all expended Ki points when you complete a short rest.",
-				"When you finish reading this scroll, the magic empowering it is used up. <i>Can a student 'use up' wisdom?</i>"
+				"When you finish reading this scroll, the magic empowering it is used up. {@i Can a student 'use up' wisdom?}"
 			],
 			"foundryImg": "icons/sundries/scrolls/scroll-yellow-teal.webp"
 		},
@@ -8884,9 +9001,9 @@
 			"weight": 3,
 			"wondrous": true,
 			"entries": [
-				"<i>n the silence of a single breath, the forest reveals its wisdom. Does the tree ponder its growth, or does it simply become? Seek not the answers in the whispers of the wind, for the true path lies in the stillness of your own heart. When you cease to seek, you find all that you have ever sought.</i>",
+				"{@i n the silence of a single breath, the forest reveals its wisdom. Does the tree ponder its growth, or does it simply become? Seek not the answers in the whispers of the wind, for the true path lies in the stillness of your own heart. When you cease to seek, you find all that you have ever sought.}",
 				"This scroll is part of a larger meditation on the discovery and realization of the virtuous self. If you spend 48 hours over a period of 6 days or fewer studying the scroll's contents and contemplating its maxims, you gain 1 Ki point. If you do not have abilities that use Ki points, you may spend 1 Ki point as a reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by {@dice 1d10} + your Dexterity modifier + your monk level.",
-				"When you finish reading this scroll, the magic empowering it is used up. <i>Can a student 'use up' wisdom?</i>"
+				"When you finish reading this scroll, the magic empowering it is used up. {@i Can a student 'use up' wisdom?}"
 			],
 			"foundryImg": "icons/sundries/scrolls/scroll-yellow-teal.webp"
 		},
@@ -8961,7 +9078,7 @@
 			"weight": 2,
 			"wondrous": true,
 			"entries": [
-				"<i>This cloak was crafted and imbued with powerful undead magic by the necromancer Zulann Fass while she was in the employ of the warlord Dragomir. Dragomir had been turned to vampirism and, not wanting to leave his previous life behind, demanded that Zulann craft a magical garment that would allow him to travel in the light of the sun without being destroyed. While Zulann was successful, the cloak severely dampened many of the vampiric abilities that Dragomir had come to enjoy. For this inconvenience, she was drained of her lifeblood by Dragomir and left to die.</i>",
+				"{@i This cloak was crafted and imbued with powerful undead magic by the necromancer Zulann Fass while she was in the employ of the warlord Dragomir. Dragomir had been turned to vampirism and, not wanting to leave his previous life behind, demanded that Zulann craft a magical garment that would allow him to travel in the light of the sun without being destroyed. While Zulann was successful, the cloak severely dampened many of the vampiric abilities that Dragomir had come to enjoy. For this inconvenience, she was drained of her lifeblood by Dragomir and left to die.}",
 				"While attuned to this cloak, you have resistance to radiant damage and advantage on saving throws against light-based spells. You are vulnerable to bludgeoning, piercing, and slashing damage from weapons or attacks made solely of wood while attuned to this cloak (a club, but not a spear, for example).",
 				"Additionally, a creature with the Sunlight Sensitivity or Sunlight Hypersensitivity traits (such as a drow or a vampire) have those traits suppressed.",
 				"A {@creature vampire} that is attuned to this cloak cannot use its Shapechanger or Misty Escape abilities."
@@ -9002,8 +9119,15 @@
 			"weight": 3,
 			"wondrous": true,
 			"entries": [
-				"It’s unclear if this cloak is an artifact of an extinct Reghed Fox Tribe, or if it is merely a marketing ploy. Regardless, while wearing this fur cloak, you have the following benefits:",
-				"<ul><li>You are resistant to cold damage</li><li>You add +{@dice 1d4} to Intelligence ability checks and saving throws</li><li>You are have advantage on saving throws to resist magical effects that would cause you to be {@condition paralyzed} or {@condition restrained}, and you have advantage on checks to escape being {@condition grappled}</li></ul>"
+				"It's unclear if this cloak is an artifact of an extinct Reghed Fox Tribe, or if it is merely a marketing ploy. Regardless, while wearing this fur cloak, you have the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You are resistant to cold damage",
+						"You add +{@dice 1d4} to Intelligence ability checks and saving throws",
+						"You are have advantage on saving throws to resist magical effects that would cause you to be {@condition paralyzed} or {@condition restrained}, and you have advantage on checks to escape being {@condition grappled}"
+					]
+				}
 			],
 			"foundryImg": "icons/equipment/back/cloak-brown-fur-white.webp"
 		},
@@ -9044,7 +9168,14 @@
 			"recharge": "restLong",
 			"entries": [
 				"This less-than-fashionable cloak is made from rat fur. While wearing this cloak, you have the following benefits:",
-				"<ul><li>Your AC increases by +1</li><li>You are immune to mundane diseases</li><li>As an action, you can command the cloak to transform you into a rat for up to 1 hour. The transformation otherwise functions as the {@spell polymorph} spell, but you can use a bonus action to revert to your normal form.  Once you use this ability, you can't do so again until you complete a long rest.</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"Your AC increases by +1",
+						"You are immune to mundane diseases",
+						"As an action, you can command the cloak to transform you into a rat for up to 1 hour. The transformation otherwise functions as the {@spell polymorph} spell, but you can use a bonus action to revert to your normal form. Once you use this ability, you can't do so again until you complete a long rest."
+					]
+				}
 			],
 			"foundryImg": "icons/equipment/back/cloak-fur-brown.webp"
 		},
@@ -9085,9 +9216,19 @@
 			"wondrous": true,
 			"recharge": "restShort",
 			"entries": [
-				"Although it appears impressive at a distance, this crown is made from fool’s gold and with set with gems made of glass. While wearing this crown, you are under the following effects:",
-				"<ul><li>You are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type.</li><li>Creatures can telepathically communicate with you only if you allow it.</li><li>You cannot gain any benefit from spells of the divination school.</li><li>You Wisdom score is reduced by 2.</li><li>You have advantage on Deception checks.</li><li>You can cast the {@spell disguise self} spell. Once you use this ability, you can't use it again until you complete a short rest.</li></ul>",
-				"<b>Cursed.</b> This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately teleports back into your possession."
+				"Although it appears impressive at a distance, this crown is made from fool's gold and with set with gems made of glass. While wearing this crown, you are under the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"You are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type.",
+						"Creatures can telepathically communicate with you only if you allow it.",
+						"You cannot gain any benefit from spells of the divination school.",
+						"You Wisdom score is reduced by 2.",
+						"You have advantage on Deception checks.",
+						"You can cast the {@spell disguise self} spell. Once you use this ability, you can't use it again until you complete a short rest."
+					]
+				},
+				"{@b Cursed.} This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately teleports back into your possession."
 			],
 			"foundryImg": "icons/equipment/head/crown-gold-blue.webp"
 		},
@@ -9104,9 +9245,24 @@
 				"This artifact is wrought from the finest yellow gold. Its beautifully crafted framework is set with huge, colored gemstone prisms in place of lenses. An unwavering, pure flame burns within. The faces are normally fitted with clear crystal lenses, but the colorful gem lenses can be slid down to create a variety of magical effects.",
 				"The flame of {@item Daoud's Wondrous Lantern} cannot be extinguished by any known means, other than by exhausting its supply of fuel. If this occurs, however, the lantern's last user is instantly slain. The lantern is fueled by crushed gemstones, contained in a small compartment at its base. The lantern can be refueled with 10,000 gp worth of crushed gemstones, which provide it with 100 charges. If used only to provide light, the lantern burns 1 charge per year. The use of the lantern's magical powers require additional charges, however, and thus burn fuel at a faster rate.",
 				"When open, the lantern provides bright light out to a distance of 60 feet, and dim light out to a distance of 120 feet. The various shutters of the lantern can be operated as an action. The shutters of each side of the lantern can be operated independently, allowing the user to choose the angle light is emitted in 90 degree segments. Based on which lenses are lowered, certain magical effects occur as described below. Unless described otherwise, each lens affects creatures within the lantern's area of bright light (60 feet). The wielder of the lantern is never effected by the lantern's magic.",
-				"<ul><li><b>Closed. </b>The lantern emits no light.</li><li><b>Crystal Lens (1 charge / year). </b>This lens casts a white light that provides no immediate effect, but those touched by the light for at least 4 hours do not need food, drink, or sleep for the next day. Those who spend at least 8 hours in the lantern's glow regain 25 hit points and have the effects of any disease or poison suspended for 24 hours. Those who spend a consecutive week in the light of the lantern are cured of all diseases and have all poisons neutralized.</li><li><b>Ruby Lens (5 charges / round). </b>This lens casts a red light that causes those touched by it to be affected as though they were targeted by a {@spell hold monster} spell.</li><li><b>Jacinth Lens (5 charges / round). </b>This lens casts an orange light that causes those touched by it to burst into magical flames and take {@dice 10d6} fire damage, or half as much on a successful Dexterity saving throw.</li><li><b>Topaz Lens (5 charges / round). </b>This lens casts a yellow light that causes those touched by it to crackle with lightning, taking {@dice 10d6} lightning damage, or half as much on a successful Constitution saving throw.</li><li><b>Emerald Lens (5 charges / round). </b>This lens casts a green light that causes those touched by it to behave as though affected by a {@spell haste} spell for 1 minute.</li><li><b>Sapphire Lens (5 charges / round). </b>This lens casts a blue light that causes those touched by it to become {@condition blinded} unless they succeed on a Wisdom saving throw.</li><li><b>Lapis Lazuli Lens (5 charges / round). </b>This lens casts an indigo light that causes those touched by it to become {@condition frightened} unless they succeed on a Wisdom saving throw.</li><li><b>Amethyst Lens (5 charges / round). </b>This lens casts a violet light that causes those touched by it to be affected as though they were targeted by an {@spell enemies abound} spell.</li><li><b>Multiple Lenses (30 charges / round). </b>You can lower all the lenses of the lantern, causing creatures touched by the light to be affected as though they were targeted by a {@spell prismatic spray} spell.</li><li><b>Spinning Lantern (50 charges / minute). </b>You can lower all of the lenses and spin the lantern, replicating the effects of the {@spell prismatic wall} spell's spherical option, centered on the lantern.</li></ul>",
+				{
+					"type": "list",
+					"items": [
+						"{@b Closed. }The lantern emits no light.",
+						"{@b Crystal Lens (1 charge / year). }This lens casts a white light that provides no immediate effect, but those touched by the light for at least 4 hours do not need food, drink, or sleep for the next day. Those who spend at least 8 hours in the lantern's glow regain 25 hit points and have the effects of any disease or poison suspended for 24 hours. Those who spend a consecutive week in the light of the lantern are cured of all diseases and have all poisons neutralized.",
+						"{@b Ruby Lens (5 charges / round). }This lens casts a red light that causes those touched by it to be affected as though they were targeted by a {@spell hold monster} spell.",
+						"{@b Jacinth Lens (5 charges / round). }This lens casts an orange light that causes those touched by it to burst into magical flames and take {@dice 10d6} fire damage, or half as much on a successful Dexterity saving throw.",
+						"{@b Topaz Lens (5 charges / round). }This lens casts a yellow light that causes those touched by it to crackle with lightning, taking {@dice 10d6} lightning damage, or half as much on a successful Constitution saving throw.",
+						"{@b Emerald Lens (5 charges / round). }This lens casts a green light that causes those touched by it to behave as though affected by a {@spell haste} spell for 1 minute.",
+						"{@b Sapphire Lens (5 charges / round). }This lens casts a blue light that causes those touched by it to become {@condition blinded} unless they succeed on a Wisdom saving throw.",
+						"{@b Lapis Lazuli Lens (5 charges / round). }This lens casts an indigo light that causes those touched by it to become {@condition frightened} unless they succeed on a Wisdom saving throw.",
+						"{@b Amethyst Lens (5 charges / round). }This lens casts a violet light that causes those touched by it to be affected as though they were targeted by an {@spell enemies abound} spell.",
+						"{@b Multiple Lenses (30 charges / round). }You can lower all the lenses of the lantern, causing creatures touched by the light to be affected as though they were targeted by a {@spell prismatic spray} spell.",
+						"{@b Spinning Lantern (50 charges / minute). }You can lower all of the lenses and spin the lantern, replicating the effects of the {@spell prismatic wall} spell's spherical option, centered on the lantern."
+					]
+				},
 				"All Saving Throws for the lantern's magical effects are DC 23.",
-				"Daoud of Tusmit originally created ten colors of gem lenses for the lantern, but when adventurers found it among Iggwilv’s treasures, three of the lenses were missing.",
+				"Daoud of Tusmit originally created ten colors of gem lenses for the lantern, but when adventurers found it among Iggwilv's treasures, three of the lenses were missing.",
 				"It is said that anyone who possesses the lantern will slowly grow more and more possessive of it, reaching the point of paranoia after the first year of possession. They will keep it hidden from others and become suspicious of anyone asking about it or touching it. Progressively, the owner will eventually believe others are trying to take the lantern from them and defend it with violence, if necessary."
 			]
 		},
@@ -9239,7 +9395,51 @@
 			"recharge": "restShort",
 			"entries": [
 				"As a reaction when you are hit by an attack you are aware of, you may teleport 15 feet in a random direction and cause the attack to miss. You have no control over the distance you teleport, however the item will not deposit you inside solid material. The item does not prevent you from being teleported over perilous drops, into hazardous effects, or through walls. Once you use this ability, you cannot use it again until you complete a short rest.",
-				"<table><tr><th>{@dice 1d8}</th><th>Direction</th></tr><tr><td>1</td><td>North</td></tr><tr><td>2</td><td>Northeast</td></tr><tr><td>3</td><td>East</td></tr><tr><td>4</td><td>Southeast</td></tr><tr><td>5</td><td>South</td></tr><tr><td>6</td><td>Southwest</td></tr><tr><td>7</td><td>West</td></tr><tr><td>8</td><td>Northwest</td></tr></table>"
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice 1d8}",
+						"Direction"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"1",
+							"North"
+						],
+						[
+							"2",
+							"Northeast"
+						],
+						[
+							"3",
+							"East"
+						],
+						[
+							"4",
+							"Southeast"
+						],
+						[
+							"5",
+							"South"
+						],
+						[
+							"6",
+							"Southwest"
+						],
+						[
+							"7",
+							"West"
+						],
+						[
+							"8",
+							"Northwest"
+						]
+					]
+				}
 			],
 			"foundryImg": "icons/equipment/chest/shirt-collared-green.webp"
 		},
@@ -9254,7 +9454,7 @@
 				"A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature.",
 				"The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.",
 				"The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.",
-				"<b>Serpentine Owl.</b>",
+				"{@b Serpentine Owl.}",
 				"This serpentine statuette of an owl can become a {@creature giant owl} for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence."
 			],
 			"foundryImg": "icons/sundries/gaming/chess-knite-gray.webp"
@@ -9366,7 +9566,7 @@
 			"weight": 2,
 			"wondrous": true,
 			"entries": [
-				"<i>The town of Luskan has earned its reputation as a lawless and dangerous place. The rampant brigandry in the area means a great many stolen goods are funneled through Luskan's back rooms and inns. One of the town's residents, the halfling Gentrus, crafted this mirror to help him divine the true nature of items he wished to buy. After a close call with a wererat, Gentrus decided to leave Luskan for the safety of Icewind Dale, joining a caravan traveling north. The halfling died on the road during a bandit attack, but the caravan's survivors drove off the bandits.</i>",
+				"{@i The town of Luskan has earned its reputation as a lawless and dangerous place. The rampant brigandry in the area means a great many stolen goods are funneled through Luskan's back rooms and inns. One of the town's residents, the halfling Gentrus, crafted this mirror to help him divine the true nature of items he wished to buy. After a close call with a wererat, Gentrus decided to leave Luskan for the safety of Icewind Dale, joining a caravan traveling north. The halfling died on the road during a bandit attack, but the caravan's survivors drove off the bandits.}",
 				"Looking at an object's reflection in this mirror shows its aura. A user proficient in the {@skill Arcana} skill can use this mirror with the same effect as a {@spell detect magic} spell or an {@spell identify} spell, at will. If a user studies a particular area through the mirror for 10 minutes or more, they gain the effects of the {@spell see invisibility} spell for as long as they remain in the same room or general area."
 			],
 			"foundryImg": "icons/commodities/treasure/gem-framed-spiral-purple.webp"
@@ -9475,7 +9675,17 @@
 			"wondrous": true,
 			"entries": [
 				"This deceptively simple cloak protects its wearer from a swathe of common undead abilities. While wearing it, you gain the following benefits:",
-				"<ul><li>You are resistant to necrotic damage.</li><li>Your hit point maximum cannot be reduced.</li><li>You have advantage on saving throws against effects that would {@condition paralyze} you.</li><li>You have advantage on saving throws to resist disease</li><li>If you are killed while wearing this cloak by an effect that would cause your body to rise from the dead as an Undead creature, your body instead remains dead.</li><li>Your Strength score cannot be reduced by the features of a {@creature Shadow} or similar undead creature, and you are immune to the {@spell ray of enfeeblement} spell.</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"You are resistant to necrotic damage.",
+						"Your hit point maximum cannot be reduced.",
+						"You have advantage on saving throws against effects that would {@condition paralyze} you.",
+						"You have advantage on saving throws to resist disease",
+						"If you are killed while wearing this cloak by an effect that would cause your body to rise from the dead as an Undead creature, your body instead remains dead.",
+						"Your Strength score cannot be reduced by the features of a {@creature Shadow} or similar undead creature, and you are immune to the {@spell ray of enfeeblement} spell."
+					]
+				}
 			],
 			"foundryImg": "icons/equipment/back/cloak-collared-grey-gold.webp"
 		},
@@ -9593,7 +9803,7 @@
 			"entries": [
 				"This reddish gemstone is indescribably beautiful and exquisitely cut in dozens of facets that reflect the smallest light into a splendid display of radiant beams. When openly displayed in the presence of any light source, the stone doubles the effective radius of illumination. When held aloft, the {@item jacinth of inestimable beauty} makes the bearer appear impossibly beautiful. Those who behold the bearer must make a DC 20 Constitution saving throw or be permanently {@condition blinded}.",
 				"The bearer of the jacinth can use an action to cause the gem to wrap them in such incredible aesthetic that those who behold them must succeed on a DC 20 Wisdom saving throw or drop to 0 hit points and begin dying. Once this ability is used, it can't be used again until the next day.",
-				"<b>Cursed. </b>When you attune to this item, you become utterly captivated by it. You cannot remove you attunement to this item unless targeted by a {@spell wish} spell. Additionally, you must spend an extra hour to complete a long rest. This extra hour can occur before, after, or surrounding your normal period of rest or sleep, but it must be spent gazing at the {@item jacinth of inestimable beauty}. While gazing in this manner, you are {@condition stunned}."
+				"{@b Cursed. }When you attune to this item, you become utterly captivated by it. You cannot remove you attunement to this item unless targeted by a {@spell wish} spell. Additionally, you must spend an extra hour to complete a long rest. This extra hour can occur before, after, or surrounding your normal period of rest or sleep, but it must be spent gazing at the {@item jacinth of inestimable beauty}. While gazing in this manner, you are {@condition stunned}."
 			]
 		},
 		{
@@ -9605,7 +9815,7 @@
 			"wondrous": true,
 			"entries": [
 				"This blue silk choker is bound by a simple bone clasp in the front that bears a sigil of unknown origin. While attuned to this choker, you can't be affected or detected by spells of 3rd level or lower.",
-				"<b>Unwholesome Arcana. </b> You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell.  For every level of spell averted by this item, you take 5 force damage that cannot be reduced by any means."
+				"{@b Unwholesome Arcana. } You cannot remove your attunement to this cursed item unless subjected to a {@spell remove curse} spell. For every level of spell averted by this item, you take 5 force damage that cannot be reduced by any means."
 			],
 			"foundryImg": "icons/magic/symbols/runes-triangle-blue.webp"
 		},
@@ -9618,7 +9828,7 @@
 			"wondrous": true,
 			"entries": [
 				"This magical ring absorbs mystical energies around its wearer. Unfortunately, this also includes their life energies. While wearing this ring you have advantage on saving throws against spells and other magical effects, but you reduce your Constitution by 4 points. When you reduce your Constitution, your current and maximum hit points are reduced as well.",
-				"<b>Curse. </b>This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the ring, which immediately teleports back into your finger or pocket."
+				"{@b Curse. }This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the ring, which immediately teleports back into your finger or pocket."
 			],
 			"foundryImg": "icons/equipment/finger/ring-band-engraved-teal.webp"
 		},
@@ -9693,9 +9903,16 @@
 			"weight": 50,
 			"wondrous": true,
 			"entries": [
-				"Unlike most scrolls, a {@item Nether Scroll of Ythryn} is not a consumable magic item. It takes 30 days of concentrated study—at least 8 hours per day—to attempt to understand this scroll. After completing this study, you must make a DC 25 Intelligence ({@skill Arcana}) check. If this check fails, you take {@dice 16d10} psychic damage, and you can attempt the check again after another 30 days of concentrated study.",
+				"Unlike most scrolls, a {@item Nether Scroll of Ythryn} is not a consumable magic item. It takes 30 days of concentrated study\u2014at least 8 hours per day\u2014to attempt to understand this scroll. After completing this study, you must make a DC 25 Intelligence ({@skill Arcana}) check. If this check fails, you take {@dice 16d10} psychic damage, and you can attempt the check again after another 30 days of concentrated study.",
 				"When you succeed on the check, you gain the following benefits:",
-				"<ul><li>Your Intelligence score increases by 2, to a maximum of 22. Once you gain this benefit, you can't use this scroll to increase your Intelligence again.</li><li>You gain the potential to cast spells above 9th level.</li><li>You increase the number of magic items you can attune to by 1.</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"Your Intelligence score increases by 2, to a maximum of 22. Once you gain this benefit, you can't use this scroll to increase your Intelligence again.",
+						"You gain the potential to cast spells above 9th level.",
+						"You increase the number of magic items you can attune to by 1."
+					]
+				}
 			],
 			"foundryImg": "icons/sundries/scrolls/scroll-writing-orange-black.webp"
 		},
@@ -9710,7 +9927,7 @@
 			"recharge": "restLong",
 			"entries": [
 				"This gorgeous cloak is hemmed with peacock feathers. Your Charisma score is 19 while you wear this cloak. It has no effect on you if your Charisma is already 19 or higher without it.",
-				"<b>Blinding Beauty. </b>You can cause all humanoids within 30 feet who can see you to be blinded by supernatural beauty. They must make a DC 14 Wisdom saving throw or be blinded for 1 minute. They may attempt a new saving throw at the end of their turn. Once you use this ability, you can't use it again until you complete a long rest."
+				"{@b Blinding Beauty. }You can cause all humanoids within 30 feet who can see you to be blinded by supernatural beauty. They must make a DC 14 Wisdom saving throw or be blinded for 1 minute. They may attempt a new saving throw at the end of their turn. Once you use this ability, you can't use it again until you complete a long rest."
 			],
 			"foundryImg": "icons/equipment/back/cloak-collared-pink-gold.webp"
 		},
@@ -9750,10 +9967,10 @@
 			"weight": 3,
 			"wondrous": true,
 			"entries": [
-				"<i>A great amount of irony surrounds the creation of this magical cloak. Relair was a mage who overestimated the control he had over magic, and in the course of creating this garment he apparently inflicted lycanthropy upon himself. The wearer can change form whenever he wishes. Relair was not so lucky.</i>",
+				"{@i A great amount of irony surrounds the creation of this magical cloak. Relair was a mage who overestimated the control he had over magic, and in the course of creating this garment he apparently inflicted lycanthropy upon himself. The wearer can change form whenever he wishes. Relair was not so lucky.}",
 				"This cloak is lined with the fur of dire wolves. As an action, you can command the cloak to transform you into a {@creature Dire Wolf} for 1 hour. The transformation otherwise functions as the {@spell polymorph} spell, except you retain your mental ability scores.",
-				"<b>Cursed. </b>This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession.",
-				"<b>Ill-Considered. </b>This cloak includes no way to end its transformation early, unless you are reduced to 0 hit points. Furthermore, each time you transform using this cloak, roll a d20. On the roll of a 1, you contract the wolf strain of lycanthropy."
+				"{@b Cursed. }This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession.",
+				"{@b Ill-Considered. }This cloak includes no way to end its transformation early, unless you are reduced to 0 hit points. Furthermore, each time you transform using this cloak, roll a d20. On the roll of a 1, you contract the wolf strain of lycanthropy."
 			],
 			"foundryImg": "icons/equipment/back/cloak-heavy-collared-fur-green.webp"
 		},
@@ -9766,7 +9983,7 @@
 			"wondrous": true,
 			"entries": [
 				"This ring appears to be a {@item ring of agility} when inspected or the target of an {@spell identify} spell. While attuned, it reduces your dexterity score to 6, unless it is already lower, and prevents you from casting spells with somatic components.",
-				"<b>Cursed. </b>This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession."
+				"{@b Cursed. }This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession."
 			],
 			"foundryImg": "icons/equipment/finger/ring-cabochon-thin-silver-orange.webp"
 		},
@@ -9790,8 +10007,36 @@
 			"wondrous": true,
 			"recharge": "dawn",
 			"entries": [
-				"Once per day, the bearer of this ring can re-roll any single die roll. When they do so, they magically age, according to the following chart.  If your ancestry is not listed below, work with the DM to choose or create an appropriate one.",
-				"<table><tr><th>Ancestry</th><th>Aging</th></tr><tr><td>Human, Dragonborn, Half-Orc</td><td>+{@dice 1d4} years</td></tr><tr><td>Half-elf, Halfling</td><td>+{@dice 2d4} years</td></tr><tr><td>Dwarf, Gnome</td><td>+{@dice 2d6} years</td></tr><tr><td>Elf</td><td>+{@dice 2d10} years</td></tr></table>"
+				"Once per day, the bearer of this ring can re-roll any single die roll. When they do so, they magically age, according to the following chart. If your ancestry is not listed below, work with the DM to choose or create an appropriate one.",
+				{
+					"type": "table",
+					"colLabels": [
+						"Ancestry",
+						"Aging"
+					],
+					"colStyles": [
+						"col-6",
+						"col-6"
+					],
+					"rows": [
+						[
+							"Human, Dragonborn, Half-Orc",
+							"+{@dice 1d4} years"
+						],
+						[
+							"Half-elf, Halfling",
+							"+{@dice 2d4} years"
+						],
+						[
+							"Dwarf, Gnome",
+							"+{@dice 2d6} years"
+						],
+						[
+							"Elf",
+							"+{@dice 2d10} years"
+						]
+					]
+				}
 			],
 			"foundryImg": "icons/tools/navigation/hourglass-yellow.webp"
 		},
@@ -9804,7 +10049,7 @@
 			"wondrous": true,
 			"entries": [
 				"Your Charisma score is 18 while you wear this ring. It has no effect on you if your Charisma is already 18 or higher without it.",
-				"<b>It does say 'human' inlfuence…  </b> You have disadvantage on Charisma checks to influence non-human creatures (including humanoids and non-humanoids)."
+				"{@b It does say 'human' inlfuence... } You have disadvantage on Charisma checks to influence non-human creatures (including humanoids and non-humanoids)."
 			],
 			"foundryImg": "icons/equipment/finger/ring-faceted-silver-orange.webp"
 		},
@@ -9840,7 +10085,14 @@
 			"entries": [
 				"While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground.",
 				"Additionally, this ring has 5 charges. You can expend a charge to cast one of the spells below (Save DC 15). The ring regains all expended charges when you finish a long rest:",
-				"<ul><li>{@spell frost fingers}</li><li>{@spell absorb elements} (cold damage only)</li><li>{@spell flame blade} (2 charges; deals cold damage instead of fire)</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"{@spell frost fingers}",
+						"{@spell absorb elements} (cold damage only)",
+						"{@spell flame blade} (2 charges; deals cold damage instead of fire)"
+					]
+				}
 			]
 		},
 		{
@@ -9907,9 +10159,83 @@
 			"entries": [
 				"This robe has cloth patches of various shapes and colors covering it. While wearing the robe. you can use an action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.",
 				"The robe has two of each of the following patches:",
-				"<ul><li>{@item +1 dagger}</li><li>{@item sending stones}</li><li>{@item magic compass}</li><li>{@item mystery key}</li><li>{@item tanglefoot bag}</li><li>{@item sovereign glue}</li></ul>",
+				{
+					"type": "list",
+					"items": [
+						"{@item +1 dagger}",
+						"{@item sending stones}",
+						"{@item magic compass}",
+						"{@item mystery key}",
+						"{@item tanglefoot bag}",
+						"{@item sovereign glue}"
+					]
+				},
 				"In addition, the robe has {@dice 4d4} other patches. The DM chooses the patches or determines them randomly.",
-				"<table><tr><th>{@dice 1d100}</th><th>Patch</th></tr><tr><td>01-08</td><td>Bag of 500 gp</td></tr><tr><td>09-15</td><td>{@item Eversoaking Sponge}</td></tr><tr><td>16-22</td><td>{@creature door mimc}, which is friendly to you</td></tr><tr><td>23-30</td><td>{@item Spell Scroll}, 3rd level</td></tr><tr><td>31-44</td><td>{@item Spell Scroll}, 4th level</td></tr><tr><td>45-51</td><td>{@item Alchemy Jug}</td></tr><tr><td>52-59</td><td>{@item Portable Bridge}</td></tr><tr><td>60-68</td><td>4 {@item potion of superior healing}</td></tr><tr><td>69-75</td><td>2 {@item greater memory potion}</td></tr><tr><td>76-83</td><td>{@item Bag of Holding}</td></tr><tr><td>84-90</td><td>{@item Broom of Flying}</td></tr><tr><td>91-96</td><td>{@item Blindfold of Darkness}</td></tr><tr><td>97-00</td><td>{@item Keg of Smokepowder}</td></tr></table>"
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice 1d100}",
+						"Patch"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"01-08",
+							"Bag of 500 gp"
+						],
+						[
+							"09-15",
+							"{@item Eversoaking Sponge}"
+						],
+						[
+							"16-22",
+							"door {@creature mimc}, which is friendly to you"
+						],
+						[
+							"23-30",
+							"{@item Spell Scroll}, 3rd level"
+						],
+						[
+							"31-44",
+							"{@item Spell Scroll}, 4th level"
+						],
+						[
+							"45-51",
+							"{@item Alchemy Jug}"
+						],
+						[
+							"52-59",
+							"{@item Portable Bridge}"
+						],
+						[
+							"60-68",
+							"4 {@item potion of superior healing}"
+						],
+						[
+							"69-75",
+							"2 {@item greater memory potion}"
+						],
+						[
+							"76-83",
+							"{@item Bag of Holding}"
+						],
+						[
+							"84-90",
+							"{@item Broom of Flying}"
+						],
+						[
+							"91-96",
+							"{@item Blindfold of Darkness}"
+						],
+						[
+							"97-00",
+							"{@item Keg of Smokepowder}"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -9940,7 +10266,15 @@
 				"You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
 				"You can play the instrument while casting a spell that causes any of its targets to be {@condition frightened} on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.",
 				"The {@item screaming bagpipes} can be used to cast the following spells:",
-				"<ul><li>{@spell tasha's caustic brew}</li><li>{@spell shatter}</li><li>{@spell fear}</li><li>{@spell confusion}</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"{@spell tasha's caustic brew}",
+						"{@spell shatter}",
+						"{@spell fear}",
+						"{@spell confusion}"
+					]
+				}
 			],
 			"foundryImg": "icons/creatures/tentacles/tentacle-eyes-yellow-pink.webp"
 		},
@@ -9979,7 +10313,7 @@
 			"wondrous": true,
 			"entries": [
 				"These oil-stained boots render their wearer immune to the {@condition restrained} condition, as well the effects of difficult terrain. In addition, the wearer has advantage on saving throws to resist becoming {@condition grappled}, {@condition petrified}, or {@condition paralyzed}.",
-				"<b>Cursed. </b> This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession.",
+				"{@b Cursed. } This item is cursed. Attuning to it curses you until you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot discard the item, which immediately returns to your possession.",
 				"While cursed by these boots, every time you roll a 1 on an ability check, attack roll, or saving throw, you fall {@condition prone}. In addition, you fall {@condition prone} if you have moved more than 15 feet since the end of your last turn."
 			],
 			"foundryImg": "icons/equipment/feet/boots-leather-grey.webp"
@@ -10007,7 +10341,7 @@
 			"recharge": "restLong",
 			"entries": [
 				"This magical battle standard is emblazoned in white with a flaming skull over crossed, smoking pistols flew above the now-extinct Giff 'Rumbling 5th' rifle corps. While attuned to this standard is prominently displayed, allies within 30 feet of you are treated as being proficient on saving throws to resist effects that would render them {@condition frightened}.",
-				"<b>Rally. </b>You can use your action to wave the {@item Standard of the Rumbling 5th} and rally your allies. All friendly creatures within 30 feet that are {@condition frightened} cease to be {@condition frightened}. Once you use this ability, you can't use it again until you complete a long rest."
+				"{@b Rally. }You can use your action to wave the {@item Standard of the Rumbling 5th} and rally your allies. All friendly creatures within 30 feet that are {@condition frightened} cease to be {@condition frightened}. Once you use this ability, you can't use it again until you complete a long rest."
 			],
 			"foundryImg": "icons/sundries/flags/banner-symbol-axe-red.webp"
 		},
@@ -10046,7 +10380,14 @@
 			"wondrous": true,
 			"entries": [
 				"This monastic tome describes ancient techniques of mental focus and is highly prized by psionic practitioners. If you study the work during one week of solitary contemplation you gain the following benefits:",
-				"<ul><li>You gain your choice of the {@feat telekinetic} or {@feat telepathic} feats.</li><li>If you are a Psi Warrior {@class Fighter} or Soulknife {@class Rogue}, you gain 4 additional Psionic Energy dice.</li><li>If you are a Great Old One {@class Warlock}, you gain an additional Pact Magic spell slot.</li></ul>"
+				{
+					"type": "list",
+					"items": [
+						"You gain your choice of the {@feat telekinetic} or {@feat telepathic} feats.",
+						"If you are a Psi Warrior {@class Fighter} or Soulknife {@class Rogue}, you gain 4 additional Psionic Energy dice.",
+						"If you are a Great Old One {@class Warlock}, you gain an additional Pact Magic spell slot."
+					]
+				}
 			],
 			"foundryImg": "icons/sundries/books/book-symbol-triangle-silver-blue.webp"
 		},
@@ -10070,7 +10411,7 @@
 			"entries": [
 				"This ugly ring appears to be a twisted, rusty nail formed into a circle. While wearing this ring, you are warded against hostility from lesser undead creatures. Any creature of the Undead type with a CR of 5 or less who targets you with an attack or a harmful spell must first make a DC 13 Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. You are not protected from area effects, such as the explosion of a {@spell fireball}.",
 				"If you make an attack or cast a spell that affects an Undead creature, or otherwise deal damage to one, it is no longer affected by the warding effect of this item.",
-				"<b>Cursed. </b> This item is cursed. Attuning to it curses you until you are targeted by a remove curse spell or similar magic. As long as you remain cursed, you cannot discard the ring, which immediately teleports back into your finger or pocket. While cursed by this ring, your Charisma score is reduced by 4. In addition, you are under an illusion that makes you appear undead."
+				"{@b Cursed. } This item is cursed. Attuning to it curses you until you are targeted by a remove curse spell or similar magic. As long as you remain cursed, you cannot discard the ring, which immediately teleports back into your finger or pocket. While cursed by this ring, your Charisma score is reduced by 4. In addition, you are under an illusion that makes you appear undead."
 			],
 			"foundryImg": "icons/equipment/finger/ring-ball-thorns-bronze.webp"
 		},
@@ -10124,7 +10465,7 @@
 			"entries": [
 				"This robe has been perfected for use by any rambling, itinerant mage that travels from town to town. Its enchantments provide protection from the bandit's arrow and from the jealous arcane trickster that lies in ambush with his {@spell stinking cloud}.",
 				"While attuned to these robes, your walking speed increases by 5 feet. Your base armor class while wearing these robes is set to 11 + your Dexterity modifier. Additionally, you can {@action disengage} as a bonus action on your turn.",
-				"<b>Candlekeep Cha-Cha. </b>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. Once you use this ability, you can't use it again until you complete a long rest."
+				"{@b Candlekeep Cha-Cha. }When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. Once you use this ability, you can't use it again until you complete a long rest."
 			],
 			"foundryImg": "icons/equipment/chest/robe-collared-blue.webp"
 		},
@@ -10150,7 +10491,7 @@
 			"wondrous": true,
 			"entries": [
 				"Any ammo stored in here becomes poisonous, dealing 1d4 extra poison damage.",
-				"<b>Cursed. </b>On a hit roll of a natural 1 with ammunition that has been poisoned by this quiver, all ammunition within the quiver polymporphs, becoming a {@creature swarm of poisonous snakes}."
+				"{@b Cursed. }On a hit roll of a natural 1 with ammunition that has been poisoned by this quiver, all ammunition within the quiver polymporphs, becoming a {@creature swarm of poisonous snakes}."
 			],
 			"foundryImg": "icons/containers/ammunition/arrows-quiver-green-brown.webp"
 		},
@@ -10172,8 +10513,8 @@
 			"rarity": "common",
 			"wondrous": true,
 			"entries": [
-				"This magical earring confers the ability to communicate with others who own similar items. Though often commissioned in matching sets, the owner of a <i>whispering earring</i> can bring theirs into resonance with another by tapping them together and speaking the item's command word. Multiple earrings can be brought into the same resonance, thus creating a web of <i>whispering earrings</i>.",
-				"After a <i>whispering earring</i> has been brought into resonance, the wearer can touch it and speak aloud, and all <i>whispering earrings</i> in the same resonance will repeat those words into the minds of their wearers. A <i>whispering earring</i> must be within 300 feet of another <i>whispering earring</i> in the same resonance to send or receive messages. Magical {@spell silence} and sheets of lead block communications to and from <i>whispering earring</i>s."
+				"This magical earring confers the ability to communicate with others who own similar items. Though often commissioned in matching sets, the owner of a {@i whispering earring} can bring theirs into resonance with another by tapping them together and speaking the item's command word. Multiple earrings can be brought into the same resonance, thus creating a web of {@i whispering earrings}.",
+				"After a {@i whispering earring} has been brought into resonance, the wearer can touch it and speak aloud, and all {@i whispering earrings} in the same resonance will repeat those words into the minds of their wearers. A {@i whispering earring} must be within 300 feet of another {@i whispering earring} in the same resonance to send or receive messages. Magical {@spell silence} and sheets of lead block communications to and from {@i whispering earring}s."
 			],
 			"foundryImg": "icons/commodities/treasure/token-silver-blue.webp"
 		},
@@ -10189,10 +10530,34 @@
 			"charges": 5,
 			"entries": [
 				"This gauzy fabric is worn over the eyes and secured by a jeweled headband. While worn, you can use your gaze to afflict creatures within 30 feet with magical forms of suffering by expending charges. All saving throws are DC 15. The item has 5 charges, and regains 1d4 when you complete a long rest.",
-				"<b>Rebuke the Fallen (1 charge). </b>An undead target must make a Charisma saving throw or take {@dice 3d8} force damage and then be turned, as though by a {@class cleric}'s Turn Undead ability, for 1 minute or until it takes any damage. A creature with a CR of 1/2 or lower is instantly destroyed if it fails its save.",
-				"<b>Crippling Pain (3 charges). </b>The target must make a Constitution saving throw or be afflicted with crippling pain for 1 minute. While affected, any speed can be no higher than 10 feet, and a target concentrating on a spell loses concentration on it. The target may make a save at the end of their turn to end the effect.",
-				"<b>Madness of Moil (5 charges). </b>The target must succeed on a Wisdom saving throw or be afflicted by an altered mental state for 1 minute. The target may make a save at the end of their turn to end the effect. Roll on the following table to determine the targets behavior:",
-				"<table><tr><th>{@dice d3}</th><th>Effect</th></tr><tr><td>1</td><td><b>Weeping. </b>Fat, oily tears well up in the target's eyes and they screw them shut. They are {@condition blinded} while the effect persists.</td></tr><tr><td>2</td><td><b>Bitterness. </b>The target is overcome by bitterness towards the nearest creature to them. While the effect persists, they will move towards them and make a single melee attack against them on their turn.</td></tr><tr><td>3</td><td><b>Lamentation. </b>The target sinks to their knees and begins wailing skyward about nothing in particular. They are {@condition prone} and {@condition incapacitated}.</td></tr></table>"
+				"{@b Rebuke the Fallen (1 charge). }An undead target must make a Charisma saving throw or take {@dice 3d8} force damage and then be turned, as though by a {@class cleric}'s Turn Undead ability, for 1 minute or until it takes any damage. A creature with a CR of 1/2 or lower is instantly destroyed if it fails its save.",
+				"{@b Crippling Pain (3 charges). }The target must make a Constitution saving throw or be afflicted with crippling pain for 1 minute. While affected, any speed can be no higher than 10 feet, and a target concentrating on a spell loses concentration on it. The target may make a save at the end of their turn to end the effect.",
+				"{@b Madness of Moil (5 charges). }The target must succeed on a Wisdom saving throw or be afflicted by an altered mental state for 1 minute. The target may make a save at the end of their turn to end the effect. Roll on the following table to determine the targets behavior:",
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice d3}",
+						"Effect"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"1",
+							"{@b Weeping.} Fat, oily tears well up in the target's eyes and they screw them shut. They are {@condition blinded} while the effect persists."
+						],
+						[
+							"2",
+							"{@b Bitterness.} The target is overcome by bitterness towards the nearest creature to them. While the effect persists, they will move towards them and make a single melee attack against them on their turn."
+						],
+						[
+							"3",
+							"{@b Lamentation.} The target sinks to their knees and begins wailing skyward about nothing in particular. They are {@condition prone} and {@condition incapacitated}."
+						]
+					]
+				}
 			]
 		},
 		{
